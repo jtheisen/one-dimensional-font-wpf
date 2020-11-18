@@ -11,16 +11,16 @@
     <Grid>
         <Grid x:Name="reference" Background="White" Width="200" Margin="0,0,600,257">
         </Grid>
-        <local:OneDim2 x:Name="oneDim" HorizontalAlignment="Left" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="TEXT_ABCDEFGHIJKLMNO" FontSize="72" Background="Beige" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Height="78" >
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="-29"/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
+        <local:OneDim2 x:Name="oneDim" HorizontalAlignment="Left" VerticalAlignment="Stretch" BorderBrush="Beige" BorderThickness="5">
+            <TextBlock Text="TEXT ABCDEFGHIJKLMNO" FontSize="72" Background="Black" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset=".2"/>
+                        <GradientStop Color="Lime" Offset=".50"/>
+                        <GradientStop Color="Lime" Offset=".70"/>
+                        <GradientStop Color="Blue" Offset=".9"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
             </TextBlock>
         </local:OneDim2>
     </Grid>

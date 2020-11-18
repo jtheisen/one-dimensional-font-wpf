@@ -74,15 +74,10 @@ namespace OneDimFont
             {
                 var x = new Vector3();
 
-                var hueFactor = 1.0f / source.PixelHeight * 360;
-
                 for (var j = 0; j < source.PixelHeight; ++j)
                 {
-                    //if (j != 50 && j != 40) continue;
-
-                    //var r = (buffer[j * source.PixelWidth + i] & 255) / 255.0;
-
                     uint packed = buffer[j * source.PixelWidth + i];
+                    
                     var pp = new Rgba32(packed);
 
                     if (pp.A != 255) continue;
@@ -91,16 +86,7 @@ namespace OneDimFont
 
                     //if (packed != 0u) System.Diagnostics.Debugger.Break();
                     
-
-                    var converter = new ColorSpaceConverter();
-
-                    var hsl = new Hsl(j * hueFactor, 1, .5f);
-
-                    //if (j == source.PixelHeight >> 1) System.Diagnostics.Debugger.Break();
-
-                    var rgb = converter.ToRgb(in hsl);
-
-                    x = Vector3.Max(x, Vector3.Multiply(1 - p.R, rgb.ToVector3()));
+                    x = Vector3.Max(x, p.ToVector3());
 
                 }
 
