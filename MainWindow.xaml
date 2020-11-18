@@ -1,0 +1,27 @@
+﻿<Window x:Class="OneDimFont.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OneDimFont"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="reference" Background="White" Width="200" Margin="0,0,600,257">
+        </Grid>
+        <local:OneDim2 x:Name="oneDim" HorizontalAlignment="Left" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
+            <TextBlock Text="TEXT_ABCDEFGHIJKLMNO" FontSize="72" Background="Beige" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Height="78" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-29"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </local:OneDim2>
+    </Grid>
+</Window>
