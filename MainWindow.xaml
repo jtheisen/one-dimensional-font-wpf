@@ -16,8 +16,9 @@
                 <TextBlock.Foreground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Red" Offset=".2"/>
-                        <GradientStop Color="Lime" Offset=".50"/>
-                        <GradientStop Color="Lime" Offset=".70"/>
+                        <GradientStop Color="Red" Offset=".38"/>
+                        <GradientStop Color="Lime" Offset=".48"/>
+                        <GradientStop Color="Blue" Offset=".65"/>
                         <GradientStop Color="Blue" Offset=".9"/>
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
